@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Papyrus+Fantasy');
+
+
+* {
+	box-sizing: border-box;
+}
+
+
+
+body {
+	width: 100vw;
+	height:100vh;
+	background-image: url("puppy.jpg");
+	background-repeat: no-repeat;
+	background-size: 100vh;
+	background-size: 100vw;
+
+}
+
+#whole{
+	width: 80%;
+	margin:0 10%;
+	height: 70%;
+}
+
+#header {
+	padding: 10%;
+    height: 35%;
+    width: 100%;
+}
+
+#bestFriend {
+	font-family: fantasy;
+    font-size: 6em;
+    position: absolute;
+    height: 23%;
+    width: 42%;
+    left: 55%;
+    top: 4%;
+}
+
+#finder {
+	font-family: fantasy;
+    font-size: 6em;
+    position: absolute;
+    height: 10%;
+    width: 24%;
+    left: 63%;
+    top: 17%;
+}
+
+[for=current-location] {
+	font-size: 228%;
+}
+
+#local {
+	text-align: center;
+}
+
+#currentLocal {
+	width: 38%;
+    line-height: 5;
+}
+
+#curentLocal {
+	width: 30%;
+}
+
+#locationSearch {
+	height: 30%;
+	/*box-sizing: border-box;*/
+    
+}
+
+#local {
+	height: 20%;
+	/*border: solid;*/
+}
+
+#search {
+	height: 10%;
+	/*border: solid;*/
+}
+
+.searchItems {
+	width: 20.5%;
+    margin: 2%;
+    line-height: 6;
+}
+
+[for=age] {
+	position: absolute;
+	left: 39%;
+}
+
+[for=breed] {
+	position: absolute;
+	left: 18%;
+}
+
+[for=size] {
+	position: absolute;
+	left: 59%;
+}
+
+[for=gender] {
+	position: absolute;
+	left: 78%;
+}
+
+.output {
+	height: 52%;
+}
+
+#map {
+	width: 46%;
+    height: 100%;
+    border: solid;
+    /* position: relative; */
+    float: left;
+    margin: 0 2%;
+}
+
+#results {
+	overflow: scroll;
+	width: 45%;
+    height: 100%;
+    border: solid;
+    float: left;
+    margin: 0 2%;
+    padding: 2% 2% 0%;
+
+}
+
+#footer {
+	height: 5%;
+    text-align: center;
+    padding: 1%;
+}
