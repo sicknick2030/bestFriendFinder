@@ -10,36 +10,37 @@
 body {
 	width: 100vw;
 	height:100vh;
-	background-image: url("puppy.jpg");
-	background-repeat: no-repeat;
+	/*margin: 0% 10%;*/
+	/*background-image: url("puppy.jpg");*/
+	/*background-repeat: no-repeat;
 	background-size: 100vh;
-	background-size: 100vw;
+	background-size: 100vw;*/
 
 }
 
 #whole{
 	width: 80%;
-	margin:0 10%;
-	height: 70%;
+	margin:0% 10%;
+	height: 100%;
 }
 
 #header {
-	padding: 10%;
-    height: 35%;
+	height: 15%;
     width: 100%;
+    background-color: burlywood;
 }
 
 #bestFriend {
-	font-family: fantasy;
-    font-size: 6em;
+	font-family: 'Aladin', cursive;
+    font-size: 5em;
     position: absolute;
-    height: 23%;
-    width: 42%;
-    left: 55%;
-    top: 4%;
+    height: 7%;
+    /* width: 42%; */
+    /* left: 55%; */
+    top: 6%;
 }
 
-#finder {
+/*#finder {
 	font-family: fantasy;
     font-size: 6em;
     position: absolute;
@@ -47,69 +48,129 @@ body {
     width: 24%;
     left: 63%;
     top: 17%;
-}
+}*/
 
 [for=current-location] {
 	font-size: 228%;
 }
 
 #local {
-	text-align: center;
+	height: 15%;
+    /* border: solid; */
+    padding: 2%;
+    /*background-color: aliceblue;*/
 }
 
-#currentLocal {
-	width: 38%;
-    line-height: 5;
+#zipCode {
+	width: 13%;
+    line-height: 1;
+}
+
+#zipCode[type="text"] {
+    font-size:200%;
+}
+
+#zipCode:hover{
+	border: 1px solid #00bfff;
 }
 
 #curentLocal {
 	width: 30%;
 }
 
+[for=current-location] {
+	font-family: Old Standard TT;
+	font-size: 158%;
+}
+
 #locationSearch {
-	height: 30%;
-	/*box-sizing: border-box;*/
+	text-align: center;
     
 }
 
-#local {
-	height: 20%;
-	/*border: solid;*/
+
+#locationInput {
+	padding: 1%;
+    text-align: center;
 }
+
+/*#locationInput:hover {
+	border-color: blue;
+}*/
 
 #search {
 	height: 10%;
 	/*border: solid;*/
 }
 
-.searchItems {
-	width: 20.5%;
+#dropdown {
+	text-align: center;
+    height: 100%;
+    padding: 2%;
+}
+
+
+#petType {
+	position: absolute;
+    left: 12%;
+    width: 15%;
+    height: 6%;
+}
+
+#petType:hover{
+	border: 1px solid #00bfff;
+}
+
+#petAge {
+	position: absolute;
+    left: 29%;
+    width: 15%;
+    height: 6%;
+	/*width: 20.5%;
     margin: 2%;
-    line-height: 6;
+    line-height: 6;*/
 }
 
-[for=age] {
-	position: absolute;
-	left: 39%;
+#petAge:hover{
+	border: 1px solid #00bfff;
 }
 
-[for=breed] {
+#petSize {
 	position: absolute;
-	left: 18%;
+    left: 46%;
+    width: 15%;
+    height: 6%;
 }
 
-[for=size] {
-	position: absolute;
-	left: 59%;
+#petSize:hover{
+	border: 1px solid #00bfff;
 }
 
-[for=gender] {
+
+#petGender {
 	position: absolute;
-	left: 78%;
+    left: 63%;
+    width: 15%;
+    height: 6%;
+}
+
+#petGender:hover{
+	border: 1px solid #00bfff;
+}
+
+#petFinderSubmit {
+	position: absolute;
+    left: 80.5%;
+    height: 6%;
+    width: 7%;
+}
+
+#petFinderSubmit:hover{
+	border: 1px solid #00bfff;
 }
 
 .output {
-	height: 52%;
+	height: 55%;
 }
 
 #map {
@@ -135,5 +196,6 @@ body {
 #footer {
 	height: 5%;
     text-align: center;
-    padding: 1%;
+    padding: 1.5%;
+    background-color: aqua;
 }

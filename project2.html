@@ -4,39 +4,41 @@
     <title>Project</title>
   <!-- <link rel="stylesheet" type="text/css" href="reset.css"> -->
   <link rel="stylesheet" type="text/css" href="reset.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
     
   <link rel="stylesheet" type="text/css" href="project.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-  <header id="header">
-      <h1 id="bestFriend">Best Friend</h1>
-      <h1 id="finder">Finder</h1>
-    </header>
   
   <div id="whole">
-    <!-- <header id="header">
-        <h1>Best Friend Finder</h1>
-    </header> -->
+
+    <header id="header">
+      <h1 id="bestFriend">Best Friend Finder</h1>
+      <!-- <h1 id="finder">Finder</h1> -->
+    </header>
+
     <form id="local">
       <div id="locationSearch">
         <label for="current-location">Current Location?</label>
       </div>
-      <div id="locationinput">
-        <input class="form-control" id="zipCode" type="text">
+      <div id="locationInput">
+        <input class="form-control" id="zipCode" type="text" maxlength="5">
       </div>
     </form>
-    <form>
-      <div id="search">
+    
+    <form id="search">
+      <div id="dropdown">
         
-        Animal type: 
+        
         <select id="petType">
           <option value ="cat">Cat</option>
           <option value="dog">Dog</option>
           <option value="horse">Horse</option>
         </select>
       
-        Age: 
+        
         <select id="petAge">
             <option value=""></option>
             <option value="Baby">Baby</option>
@@ -45,7 +47,7 @@
             <option value="Senior">Senior</option>
         </select>
 
-        Size: 
+        
         <select id="petSize">
           <option value=""></option>
           <option value="S">Small</option>
@@ -54,7 +56,7 @@
           <option value="XL">Extra-large</option>
         </select>
   
-        Gender: 
+        
         <select id="petGender">
           <option value=""></option>
           <option value="M">Male</option>
@@ -65,10 +67,12 @@
       
       </div> 
     </form>
+
     <div class="output">
         <div id="map"></div>
         <div id="results"></div>
     </div>
+
     <footer id="footer">
         <p>Copryright 2017</p>
     </footer>
