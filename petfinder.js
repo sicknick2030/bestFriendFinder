@@ -75,7 +75,9 @@ function getPets(event) {
 	})
 }
 
-$(document).on("click","#petFinderSubmit",getPets);
+// $(document).on("click","#petFinderSubmit",getPets);
+$(document).on("change",".target",getPets);
+
 
 // section below is just experimental, but i think we can use it to generate the secondary dropdown (animal > breed)
 // but maybe not, may get unwieldy 
@@ -101,7 +103,10 @@ function getBreeds() {
 	})
 }
 
-$(document).on("click","#getBreedList", getBreeds);
+// $(document).on("click","#getBreedList", getBreeds);
+// $(document).on("change",".target", getBreeds);
+
+// $(".target").change(getBreeds);
 
 function showShelter()  {
 	// console.log("showShelter");
