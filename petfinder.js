@@ -58,13 +58,13 @@ function getPets(event) {
 				var animalNameDiv = $("<h2>").text(animalName);
 				animalDiv.append(animalNameDiv);
 
-				var animalImageURL = pets[i].media.photos.photo[0].$t;
+				var animalImageURL = pets[i].media.photos.photo[2].$t;
 				var animalImage = $("<img class='animal'>").attr("src", animalImageURL);
 				animalDiv.append(animalImage);
 
-				var animalDescription = pets[i].description.$t;
-				var animalDescriptionDiv = $("<p>").text(animalDescription);
-				animalDiv.append(animalDescriptionDiv);
+				// var animalDescription = pets[i].description.$t;
+				// var animalDescriptionDiv = $("<p>").text(animalDescription);
+				// animalDiv.append(animalDescriptionDiv);
 
 				$("#results").append(animalDiv);
 

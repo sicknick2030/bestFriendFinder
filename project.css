@@ -11,9 +11,9 @@ body {
 	width: 100vw;
 	height:100vh;
 	/*margin: 0% 10%;*/
-	/*background-image: url("puppy.jpg");*/
-	/*background-repeat: no-repeat;
-	background-size: 100vh;
+	/*background-image: url("paws.jpg");
+	background-repeat: no-repeat;
+	background-size: 50%;
 	background-size: 100vw;*/
 
 }
@@ -25,19 +25,32 @@ body {
 }
 
 #header {
-	height: 15%;
+	height: 9%;
     width: 100%;
     background-color: burlywood;
+    text-align: center;
+}
+
+
+#input{
+	background-image: url("puppy.jpg");
+}
+#whiteBox {
+	border-left: solid;
+    border-right: solid;
+    height: 86%;
+    background-color: white;
 }
 
 #bestFriend {
 	font-family: 'Aladin', cursive;
     font-size: 5em;
     position: absolute;
-    height: 7%;
+    height: 9%;
     /* width: 42%; */
     /* left: 55%; */
-    top: 6%;
+    top: 0%;
+    width: 80%;
 }
 
 /*#finder {
@@ -74,6 +87,12 @@ body {
 	border: 1px solid #00bfff;
 }
 
+#zipCode::placeholder {
+  font-size: 40%;
+  font-style: italic;
+  font-family: Helvetica;
+}
+
 #curentLocal {
 	width: 30%;
 }
@@ -99,7 +118,7 @@ body {
 }*/
 
 #search {
-	height: 10%;
+	height: 29%;
 	/*border: solid;*/
 }
 
@@ -191,6 +210,26 @@ body {
     margin: 0 2%;
     padding: 2% 2% 0%;
 
+}
+
+.animalDiv {
+	text-align: center;
+    color: black;
+    border: 1px solid;
+    margin: 2%;
+}
+
+h2 {
+	font-family: Nexa Bold,arial,helvetica,sans-serif;
+    font-color: purple;
+    font-color: purple;
+    color: purple;
+    font-weight: bold;
+}
+
+img.animal{
+	height: 30%;
+	width: 90%;
 }
 
 #footer {

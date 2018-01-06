@@ -21,60 +21,62 @@
       <!-- <h1 id="finder">Finder</h1> -->
     </header>
 
-    <form id="local">
-      <div id="locationSearch">
-        <label for="current-location">Current Location?</label>
-      </div>
-      <div id="locationInput">
-        <input class="form-control" id="zipCode" type="text" maxlength="5">
-      </div>
-    </form>
-    
-    <form id="search">
-      <div id="dropdown">
-        
-        
-        <select id="petType">
-          <option value ="cat">Cat</option>
-          <option value="dog">Dog</option>
-          <option value="horse">Horse</option>
-        </select>
+    <div id="whiteBox">
+
+      <form id="local">
+        <div id="locationSearch">
+          <label for="current-location">Current Location?</label>
+        </div>
+        <div id="locationInput">
+          <input class="form-control" id="zipCode" type="text" maxlength="5" placeholder="Zip Code">
+        </div>
+      </form>
       
+      <form id="search">
+        <div id="dropdown">
+          
+          
+          <select id="petType">
+            <option value ="cat">Cat</option>
+            <option value="dog">Dog</option>
+            <option value="horse">Horse</option>
+          </select>
         
-        <select id="petAge">
+          
+          <select id="petAge">
+              <option value=""></option>
+              <option value="Baby">Baby</option>
+              <option value="Young">Young</option>
+              <option value="Adult">Adult</option>
+              <option value="Senior">Senior</option>
+          </select>
+
+          
+          <select id="petSize">
             <option value=""></option>
-            <option value="Baby">Baby</option>
-            <option value="Young">Young</option>
-            <option value="Adult">Adult</option>
-            <option value="Senior">Senior</option>
-        </select>
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">Extra-large</option>
+          </select>
+    
+          
+          <select id="petGender">
+            <option value=""></option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </select>
 
+          <button id="petFinderSubmit">Submit</button>
         
-        <select id="petSize">
-          <option value=""></option>
-          <option value="S">Small</option>
-          <option value="M">Medium</option>
-          <option value="L">Large</option>
-          <option value="XL">Extra-large</option>
-        </select>
-  
-        
-        <select id="petGender">
-          <option value=""></option>
-          <option value="M">Male</option>
-          <option value="F">Female</option>
-        </select>
+        </div> 
+      </form>
 
-        <button id="petFinderSubmit">Submit</button>
-      
-      </div> 
-    </form>
-
-    <div class="output">
-        <div id="map"></div>
-        <div id="results"></div>
+      <div class="output">
+          <div id="map"></div>
+          <div id="results"></div>
+      </div>
     </div>
-
     <footer id="footer">
         <p>Copryright 2017</p>
     </footer>
