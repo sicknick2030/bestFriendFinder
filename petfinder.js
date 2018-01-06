@@ -1,3 +1,4 @@
+// initializes firebase
 var config = {
     apiKey: "AIzaSyBj0VNeS_U8PR-NDxZNYUnfb67Ca76FEzw",
     authDomain: "bestfriendfinder-26231.firebaseapp.com",
@@ -11,24 +12,18 @@ firebase.initializeApp(config);
 var db = firebase.database().ref();
 var dbFav = firebase.database().ref("/favorites");
 
-
 console.log("wow");
-var PetFinderAPIKey = "156a1b8fa2233c99240e24d804ef4754";
+
+var PetFinderAPIKey = "156a1b8fa2233c99240e24d804ef4754"; 
 
 function getPets(event) {
 	event.preventDefault();
-	// console.log("getPets");
 
 	var petType = $("#petType").val().trim();
 	var zipCode = $("#zipCode").val().trim();
 	var petAge = $("#petAge").val().trim();
 	var petSize = $("#petSize").val().trim();
 	var petGender = $("#petGender").val().trim();
-
-	// db.push({
-	// 	petType: petType,
-	// 	zipCode: zipCode,
-	// });
 
 	var queryURL = "https://api.petfinder.com/pet.find";
 
@@ -48,7 +43,6 @@ function getPets(event) {
 			count: 5,
 		},
 		success: function(petApiData) {
-			// console.log(petApiData);
 			var pets = petApiData.petfinder.pets.pet;
 			console.log("pets", pets);
 
@@ -80,7 +74,6 @@ function getPets(event) {
 	})
 }
 
-// $(document).on("click","#petFinderSubmit",getPets);
 $(document).on("change",".target",getPets);
 
 function addFavorite() {
@@ -103,7 +96,8 @@ function addFavorite() {
 			var pet = petResponse.petfinder.pet;
 			var favoriteName = pet.name.$t;
 			var favoriteShelterID = pet.shelterId.$t;
-			var favoritePhoto = pet.media.photos.photo[2];
+			var favoritePhoto = pet.media.photos.photo[2].$t;
+
 			dbFav.push({
 				favoriteID: animalID,
 				favoriteName: favoriteName,
@@ -116,71 +110,26 @@ function addFavorite() {
 
 $(document).on("click",".addFavorite",addFavorite);
 
+// this will pull the favorites from firebase and display
+// NEED FRONT END HELP HERE: 
+
 dbFav.on("child_added", function(snapshot) {
 	console.log("child_added", snapshot.val());
 
-	var favID = snapshot.val().favoriteID;
+	var favDiv = $("<div class ='favDiv'>");
 
-	// var queryURL = "https://api.petfinder.com/pet.get";
-	
-	// $.ajax({
-	// 	url: queryURL,
-	// 	jsonp: "callback",
-	// 	dataType: "jsonp",
-	// 	data: {
-	// 		key: PetFinderAPIKey,
-	// 		id: animalID,
-	// 		output: "basic",
-	// 		format: "json",
-	// 	},
-	// 	success: function(petResponse) {
-	// 		console.log(petResponse);
-	// 		var pets = petApiData.petfinder.pet;
-	// 	}
-	// })
+	var favName = snapshot.val().favoriteName;
+	var favNameDiv = $("<h2>").text(favName);
+	favDiv.append(favNameDiv);
 
-	// var favDiv = $("<div class ='favDiv'>");
+	// var favImageURL = snapshot.val().favoritePhoto;
+	// var favImage = $("<img class='animal'>").attr("src", favImageURL);
+	// favDiv.append(favImage);
 
-	// var animalName = pets[i].name.$t;
-	// var animalNameDiv = $("<h2>").text(animalName);
-	// favDiv.append(animalNameDiv);
-
-	// var animalImageURL = pets[i].media.photos.photo[2].$t;
-	// var animalImage = $("<img class='animal'>").attr("src", animalImageURL);
-	// favDiv.append(animalImage);
-
-	// var animalID = pets[i].id.$t;
-	// var favoriteButton = $("<button class='addFavorite' value='" + animalID + "'>").text("Favorite");
-	// favDiv.append(favoriteButton);
-
-	// $("#favorites").append(favDiv);
-
+	$("#favorites").append(favDiv);
 })
 
-// 	var queryURL = "https://api.petfinder.com/pet.get";
-	
-// 	$.ajax({
-// 		url: queryURL,
-// 		jsonp: "callback",
-// 		dataType: "jsonp",
-// 		data: {
-// 			key: PetFinderAPIKey,
-// 			id: animalID,
-// 			output: "basic",
-// 			format: "json",
-// 		},
-// 		success: function(petResponse) {
-// 			console.log(petResponse);
-// 			var pets = petApiData.petfinder.pet;
-// 		}
-// 	})
-
-
-
-
-
-// section below is just experimental, but i think we can use it to generate the secondary dropdown (animal > breed)
-// but maybe not, may get unwieldy 
+// helper functions below
 
 function getBreeds() {
 	console.log("getBreeds");

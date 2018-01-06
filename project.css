@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Papyrus+Fantasy');
+/*@import url('https://fonts.googleapis.com/css?family=Papyrus+Fantasy');*/
 
 
 * {
@@ -212,7 +212,7 @@ body {
 
 }
 
-.animalDiv {
+.animalDiv .favDiv {
 	text-align: center;
     color: black;
     border: 1px solid;
