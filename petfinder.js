@@ -1,3 +1,18 @@
+// function zipValidation(zipCode) {
+// 	var isValid = /^[0-9]{5}(?:-[0-9]{4})?$/.test(zipCode);
+//     if (isValid)
+//         alert('Valid ZipCode');
+//     else {
+//         alert('Invalid ZipCode');
+//     }
+// }
+
+// https://validatejs.org/
+// function zipValidation() {
+// 	var pattern = /\d{5}(-\d{4})?/;
+// 	validate({}, {zipCode: {format: pattern}});
+// }
+
 // initializes firebase
 var config = {
     apiKey: "AIzaSyBj0VNeS_U8PR-NDxZNYUnfb67Ca76FEzw",
